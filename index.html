@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Captcha Solver Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Captcha Solver Demo</h1>
+  </header>
+  <main class="container">
+    <section class="card" aria-label="Captcha solver panel">
+      <div class="row">
+        <span>Captcha URL ( ?url=... )</span>
+        <span class="hint" id="urlLabel">No URL provided. Using sample.</span>
+      </div>
+      <div class="imageWrap">
+        <img id="captchaImg" alt="Captcha image" />
+      </div>
+      <div class="actions">
+        <button id="reloadBtn" class="btn" aria-label="Reload captcha">Reload</button>
+      </div>
+      <div class="status">
+        <p id="statusText">Status: Idle</p>
+        <p id="solutionText" class="solution"></p>
+        <p id="timerText" class="timer"></p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
